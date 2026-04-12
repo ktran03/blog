@@ -7,13 +7,13 @@ tags: ["ai", "learning", "coding", "agents"]
 
 It started on a Thursday with a simple question: *how does an AI model actually work?*
 
-Not in a hand-wavy "it learns from data" way. I mean mechanically — what is happening inside the thing? I kept seeing PyTorch come up everywhere and had no idea what it was. So I opened up Claude and started asking. One word kept blocking me: **tensor**. I didn't know what a tensor was. Three minutes later, I did.
+Not in a hand-wavy "it learns from data" way. I mean mechanically — what is happening inside the thing? I kept seeing PyTorch come up everywhere and had no idea what it was. So I opened up Claude and started asking.
 
-I want to be upfront before going further: I didn't do this alone, and I'm not going to pretend otherwise. Claude was a co-builder throughout — explaining concepts, writing code, reviewing decisions, catching mistakes. What I brought was the problem, the direction, and enough curiosity to keep asking questions until things made sense. The point of this post isn't that I became an ML engineer in 4 days. It's about being empowered to build things you couldn't have built before. Knowledge is usually the barrier — you feel like you don't know enough to start, and often you're right. But with AI alongside you, filling in the gaps in real time, that barrier breaks down.
+I want to be upfront: I didn't do this alone. Claude was a co-builder throughout — explaining concepts, writing code, reviewing decisions, catching mistakes. What I brought was the problem, the direction, and enough curiosity to keep asking until things made sense. The point of this post isn't that I became an ML engineer in 4 days. It's about being empowered to build things you couldn't have built before — because with AI alongside you, filling in the gaps in real time, the knowledge barrier breaks down.
 
 ## The drilling loop
 
-The first answer Claude gave me on PyTorch — I understood maybe 40% of it. One word kept appearing: **tensor**. So I asked about tensors. Three minutes later, I got it. Back to PyTorch. Hit another term I didn't know. Drilled into that. Back to the overview. Repeat.
+The first answer Claude gave me on PyTorch — I understood maybe 40% of it. One word kept appearing: **tensor**. I didn't know what a tensor was. So I asked. Three minutes later, I got it. Back to PyTorch. Hit another term I didn't know. Drilled into that. Back to the overview. Repeat.
 
 This is a different way to learn. It's not reading a textbook front to back. It's not sitting through a tutorial series for three weeks before you touch anything real. It's more like having a patient expert in the room who never gets tired of your questions and always meets you exactly where you are.
 
@@ -63,38 +63,29 @@ The week after, I let my machine run phase 2 training — extending to ~3,000 mo
 
 The conventional path is: read theory, understand the system, then build something. That can take months before you touch anything real. What happened here was different — and faster.
 
-I started with a novice understanding, picked up a bunch of concepts quickly through Claude, then jumped into building while I was still learning. The two happened simultaneously. But AI-assisted building moves fast — faster than you can fully absorb everything in real time. So naturally things blur past you. You make decisions you don't fully understand yet. You use a technique because Claude recommended it and it works, but you couldn't explain every detail of why.
+I started with a novice understanding, picked up concepts quickly through Claude, then jumped into building while I was still learning. The two happened simultaneously. But AI-assisted building moves fast — faster than you can fully absorb everything in real time. So naturally things blur past you. You make decisions you don't fully understand yet. You use a technique because Claude recommended it and it works, but you couldn't explain every detail of why.
 
 And that's fine. Because now you go back and fill in those gaps — and it's a completely different experience than reading theory cold.
 
 "Backpropagation" means something different when you've already watched it improve your model's accuracy in real time. "Temperature scaling" clicks faster when you've already seen what miscalibrated confidence scores do to a routing system you built. The mental scaffolding is already there. The gaps fill in faster, and they stick.
 
-The conventional path keeps you in theory until you feel ready to build. The problem is you never quite feel ready, and the theory doesn't fully make sense until you've used it. So you wait to start until you understand it, but you can't fully understand it until you start. AI breaks that loop — you can learn and build at the same time, move fast, and circle back to solidify what you covered too quickly the first time.
-
 I know way more about ML now than I did on Thursday. Not because I sat and read about it — because I built something with it, end to end, and now when I go deeper into the parts I don't fully understand yet, I already have the full picture in my head. That's a different kind of knowing.
 
-## What this actually means
+## The meta-lesson
 
-This isn't a story about how smart I am. I'm not. A week earlier I didn't know what a tensor was. And I want to be clear — I'm not an ML engineer now. I'm a novice in every sense of the word. There's a mountain of things I don't understand yet, and I'm under no illusion about that. But I'm learning, picking away at it, and I have something real to show for it.
+This isn't a story about how smart I am. I'm not. A week earlier I didn't know what a tensor was. I'm not an ML engineer now — I'm a novice in every sense of the word, with a mountain of things still to understand. But I'm learning, picking away at it, and I have something real to show for it.
 
-The bottleneck used to be:
+Most people have ideas they never act on. The mountain of things you'd need to learn before you could build them looks too high. So you wait. And waiting becomes not starting. And not starting means the idea never happens.
+
+AI doesn't remove that mountain — you still have to climb it. But it climbs alongside you, filling in the gaps in real time, so you're never stuck at the base waiting to feel ready. The bottleneck used to be:
+
 - Not knowing enough to start
 - Spending months in tutorial hell before touching a real problem
 - Getting stuck on a concept and losing momentum
 - Not being able to write code fast enough to keep up with your own ideas
 
-With Claude in the loop, those bottlenecks largely disappear. You can clear a conceptual blocker in minutes. You can go from "I don't know how to implement this" to working code in a single conversation. And because you're always moving — because nothing blocks you long enough to kill your momentum — you reach somewhere real before you run out of steam.
+With Claude in the loop, those bottlenecks largely disappear. You can start now, learn as you go, and actually get somewhere before you run out of steam.
 
-The other thing that helped: I created markdown docs as I went. Not formal documentation — just notes on what I learned, what decisions I made and why, what I still didn't understand. Those docs became context I fed back into Claude sessions, keeping continuity across a project that was moving fast. They can be viewed in the repos linked above if you want to see what that looks like in practice.
+The claim isn't "I learned ML in a weekend." The claim is: I had an idea I'd been sitting on because I didn't think I could get started, and now it exists. And I understand it far better than I would have if I'd spent months reading before touching any of it.
 
-## The meta-lesson
-
-Most people have ideas they never act on. The mountain of things you'd need to learn before you could build them looks too high. So you wait until you know more. And waiting becomes not starting. And not starting means the idea never happens.
-
-AI doesn't remove that mountain — you still have to climb it. But it climbs alongside you, filling in the gaps in real time so you're never stuck at the base waiting to feel ready. You can start now, learn as you go, and actually get somewhere before you run out of momentum.
-
-That's what changed for me. I wasn't waiting to feel ready anymore. I had a collaborator that could cover my gaps while I built up the knowledge to cover them myself. The permission to start was always there — I just needed something to make that obvious.
-
-A lot of people are still treating LLMs like fancy search engines or autocomplete. That's not what this is. The right mental model is a collaborator — one that can explain, build, review, and push back, all at the level you're currently at. And that changes everything about what you can attempt.
-
-The claim isn't "I learned ML in a weekend." The claim is: I had an idea I'd been sitting on because I didn't think I could get started, and now it exists. And I understand it far better than I would have if I'd spent months reading before touching any of it. That's what's different now. The things you've been waiting to know enough to build — you can probably start them today.
+The things you've been waiting to know enough to build — you can probably start them today.
