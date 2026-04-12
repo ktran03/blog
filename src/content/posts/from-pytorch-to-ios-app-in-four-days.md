@@ -41,13 +41,13 @@ After that Thursday afternoon of drilling, the wall wasn't there anymore.
 
 I won't pretend it wasn't a full sprint. But here's what existed by Sunday evening:
 
-**The ML pipeline** — fine-tuned EfficientNet-B3 with a custom classification head to recognize ~1,000 Chữ Nôm characters. Transfer learning from ImageNet weights, then trained on character image datasets. The model runs entirely on-device via Core ML, fast enough to classify in real time.
+**The ML pipeline** ([github](https://github.com/ktran03/nomlens-MLmodel)) — fine-tuned EfficientNet-B3 with a custom classification head to recognize ~1,000 Chữ Nôm characters. Transfer learning from ImageNet weights, then trained on character image datasets. The model runs entirely on-device via Core ML, fast enough to classify in real time.
 
-**The iOS app** — you photograph a manuscript page. The app detects character bounding boxes using Apple's Vision framework, crops each one, runs it through the model, and shows the character with its Quốc ngữ transliteration and English meaning. Confidence-based routing: high confidence shows immediately, low confidence escalates to Claude Vision API as a fallback.
+**The iOS app** ([github](https://github.com/ktran03/nomlens-ios)) — you photograph a manuscript page. The app detects character bounding boxes using Apple's Vision framework, crops each one, runs it through the model, and shows the character with its Quốc ngữ transliteration and English meaning. Confidence-based routing: high confidence shows immediately, low confidence escalates to Claude Vision API as a fallback.
 
 **OTA model delivery** — models aren't bundled in the app binary. They're hosted on S3 and downloaded on demand. This means I can ship new model versions without an App Store update.
 
-**A website** for the project.
+**[NomLens](https://nomlens.com)** — the project has its own site if you want to dig deeper.
 
 Thursday to Sunday. Starting from: *what's PyTorch?*
 
