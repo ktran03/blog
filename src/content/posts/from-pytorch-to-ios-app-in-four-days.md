@@ -33,9 +33,13 @@ Once I saw that, the mysticism evaporated. There was no magic box anymore. Just 
 
 ## Then I remembered a project I'd been sitting on
 
-I'd been wanting to build something around **Chữ Nôm** — the classical Vietnamese script used for centuries before the Latin-based alphabet took over. Only around 100 people in the world can still read it fluently, which means centuries of cultural and historical text is essentially locked away.
+I'd been wanting to build something around **Chữ Nôm** — the classical Vietnamese script used for centuries before the Latin-based alphabet took over. Only around 100 people in the world can still read it fluently. Those scholars are in their 70s and 80s. The physical artifacts — stone steles, temple inscriptions, manuscripts — are deteriorating every year. Once a script dies, the history it carried dies with it.
 
-I had the idea of an app that lets you point your phone at a manuscript and get a translation. There are a few other projects working in this space, but they're mostly academic — hard to access, not user friendly, no correction flywheel, require an internet connection, inference done server-side. That wasn't what I had in mind. But every time I thought about starting, the barrier felt enormous. I didn't know ML. I didn't know Core ML. I didn't know anything about training a classifier. The starting friction felt like a wall.
+This isn't a side project for me. It's a life's mission. Centuries of Vietnamese literature, legal records, poetry, and philosophy were written in Chữ Nôm. Truyện Kiều — considered the greatest work in Vietnamese literature — was written in it. The vast majority of Vietnamese people today can't access any of it. There's a generation of scholars who hold the key to that history, and when they're gone, that key is largely gone with them. The window to capture, preserve, and make this accessible is closing, and it's closing fast.
+
+I had the idea of an app that turns any smartphone into a decoding tool — point it at an inscription, get the character, the transliteration, the meaning. Every scan gets archived. Users can correct misidentifications, feeding back into training. Ordinary people become cultural guardians without needing to know a single character themselves. A flywheel of preservation that grows with every person who uses it.
+
+There are a few other projects working in this space, but they're mostly academic — hard to access, not user friendly, no correction flywheel, require an internet connection, inference done server-side. That wasn't what I had in mind. But every time I thought about starting, the technical barrier felt enormous. I didn't know ML. I didn't know Core ML. I didn't know anything about training a classifier. The starting friction felt like a wall.
 
 After that Thursday afternoon of drilling, the wall wasn't there anymore.
 
