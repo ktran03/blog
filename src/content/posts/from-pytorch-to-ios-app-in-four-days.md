@@ -55,6 +55,8 @@ A note on how this actually got built: I'm a 10+ year iOS engineer — that's my
 
 That was intentional. If I'd stopped to hand-write every line — even on the iOS side where I could, or the Python side if I wanted to — I'd have gotten so bogged down in implementation details that I'd have lost the thread of what I was actually building. The goal was a working product, not a perfectly hand-crafted codebase. Staying at the level of decisions and direction is what let me move fast enough to see the whole thing come together before losing momentum.
 
+On the held-out test split (real handwritten samples), the model hits 97.6% top-1 accuracy with ~1.4% falling back to Claude Vision. On actual manuscript photos in the field — aged paper, ink degradation, varying scan quality — my rough estimate is 75%+, though I don't have hard numbers there yet. Closing that gap is the point of phase 2 training with real manuscript data.
+
 Thursday to Sunday. Starting from: *what's a tensor?*
 
 The week after, I let my machine run phase 2 training — extending to ~3,000 more Nôm characters, ~7,000 Chinese Han characters, and incorporating real manuscript scan data I found. That's still going.
