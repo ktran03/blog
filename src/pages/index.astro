@@ -1,0 +1,68 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/components/PostCard.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const recentPosts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+---
+
+<BaseLayout title="kt.dev">
+  <!-- Hero -->
+  <section class="mb-12">
+    <h1 class="text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-3">
+      Hey, I'm kt
+    </h1>
+    <p class="text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xl">
+      I write about building with AI — using Claude, agents, LLMs in production,
+      and what it feels like to be a developer right now. Occasionally other thoughts too.
+    </p>
+    <div class="flex gap-3 mt-5">
+      <a
+        href="/blog"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium transition-colors"
+      >
+        Read the blog
+      </a>
+      <a
+        href="/about"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 text-zinc-700 dark:text-zinc-300 text-sm font-medium transition-colors"
+      >
+        About me
+      </a>
+    </div>
+  </section>
+
+  <!-- Recent posts -->
+  <section>
+    <div class="flex items-center justify-between mb-2">
+      <h2 class="text-sm font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+        Recent posts
+      </h2>
+      <a
+        href="/blog"
+        class="text-sm text-violet-600 dark:text-violet-400 hover:underline"
+      >
+        All posts →
+      </a>
+    </div>
+
+    {recentPosts.length === 0 ? (
+      <p class="text-zinc-500 dark:text-zinc-400 py-8">No posts yet — check back soon.</p>
+    ) : (
+      <div>
+        {recentPosts.map(post => (
+          <PostCard
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.date}
+            slug={post.id}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+const navLinks = [
+  { href: '/blog', label: 'Blog' },
+  { href: '/tags', label: 'Tags' },
+  { href: '/about', label: 'About' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 border-b border-zinc-200 dark:border-zinc-800 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-sm">
+  <div class="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between">
+    <a href="/" class="font-mono font-semibold text-zinc-900 dark:text-zinc-50 hover:text-violet-600 dark:hover:text-violet-400 transition-colors">
+      kt.dev
+    </a>
+
+    <nav class="flex items-center gap-1">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={[
+            'px-3 py-1.5 rounded-md text-sm font-medium transition-colors',
+            currentPath.startsWith(link.href)
+              ? 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/40'
+              : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800/60'
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+
+      <button
+        id="theme-toggle"
+        aria-label="Toggle theme"
+        class="ml-1 p-2 rounded-md text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-100 dark:hover:bg-zinc-800/60 transition-colors"
+      >
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+        </svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block dark:hidden">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+
+  function getTheme(): 'dark' | 'light' {
+    return localStorage.getItem('theme') as 'dark' | 'light'
+      ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
+
+  function applyTheme(theme: 'dark' | 'light') {
+    html.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }
+
+  applyTheme(getTheme());
+
+  toggle?.addEventListener('click', () => {
+    applyTheme(html.classList.contains('dark') ? 'light' : 'dark');
+  });
+</script>

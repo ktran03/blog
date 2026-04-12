@@ -1,0 +1,1 @@
+{"name":"blog","type":"module","version":"0.0.1","scripts":{"dev":"astro dev","build":"astro build","preview":"astro preview"},"dependencies":{"@astrojs/mdx":"^5.0.3","@tailwindcss/typography":"^0.5.19","@tailwindcss/vite":"^4.2.2","astro":"^6.1.5","tailwindcss":"^4.2.2"}}
