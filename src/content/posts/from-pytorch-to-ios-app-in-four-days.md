@@ -1,6 +1,6 @@
 ---
-title: "From 'what's PyTorch' to a working iOS app in 4 days"
-description: "How AI-assisted learning let me go from zero ML knowledge to building a Chữ Nôm recognition app over a single weekend — and what that means for how we learn now."
+title: "From 'what's PyTorch' to a full ML pipeline in 4 days"
+description: "How AI-assisted learning let me go from zero ML knowledge to training a custom model, building the full pipeline, and shipping an app — over a single weekend."
 date: 2026-04-12
 tags: ["ai", "learning", "coding", "agents"]
 ---
