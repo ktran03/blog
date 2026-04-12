@@ -51,6 +51,18 @@ I won't pretend it wasn't a full sprint. And I want to be clear about what "buil
 
 **[NomLens](https://nomlens.com)** — the project has its own site if you want to dig deeper.
 
+## Under the hood
+
+A few technical decisions worth calling out — not to show off, but because they were interesting problems I didn't expect to encounter.
+
+**The class imbalance problem.** 461 Chữ Nôm-specific characters have zero real handwriting data anywhere in the world — they exist only as font renders. Meanwhile the 511 Han characters have ~576 real handwriting samples each from the CASIA database. Left unchecked, the model would see Han characters representing 99.4% of training data and learn to essentially ignore Nôm characters entirely. The fix is `WeightedRandomSampler` — each class gets a sampling weight inversely proportional to how many samples it has, so every class appears at roughly equal frequency in every training batch regardless of raw sample count. Without this, the whole Nôm side of the model would be useless.
+
+**Two-phase training.** Transfer learning starts from EfficientNet pretrained on ImageNet — it already knows how to detect edges, curves, strokes, and shapes from a million photos. But the classification head (the part that maps those features to Nôm character labels) starts completely random. If you unfreeze everything immediately, those random head weights produce garbage gradients that flow back through the network and destroy the pretrained features — "catastrophic forgetting." So phase 1 freezes the backbone entirely and only trains the new head for 5 epochs, getting it to a sensible state first. Phase 2 then unfreezes everything and fine-tunes at a 10× lower learning rate — gentle nudges to the backbone, not wholesale replacement.
+
+**Temperature scaling.** A model's raw confidence scores aren't calibrated out of the box. When it says "91% confident," that number doesn't necessarily reflect the actual probability of being correct. This matters a lot for NomLens because the entire routing system — accept immediately, flag for review, escalate to Claude Vision — depends on those confidence thresholds being meaningful. Temperature scaling is a post-training calibration step: fit a single scalar parameter on a held-out calibration set that scales the raw logits before softmax. The result: Expected Calibration Error dropped from 0.1038 to 0.0034. In plain terms — when the model says 90% confident, it's actually right about 90% of the time. The routing thresholds aren't arbitrary anymore.
+
+---
+
 A note on how this actually got built: I'm a 10+ year iOS engineer — that's my vertical. And yet the iOS code here was largely not written by me line by line. Same with the Python pipeline, where I have no prior background at all. In both cases I directed the agent, reviewed what it produced, pushed back when something was off, and steered the decisions. What I didn't do was nitpick every variable, every loop, every piece of logic.
 
 That was intentional. If I'd stopped to hand-write every line — even on the iOS side where I could, or the Python side if I wanted to — I'd have gotten so bogged down in implementation details that I'd have lost the thread of what I was actually building. The goal was a working product, not a perfectly hand-crafted codebase. Staying at the level of decisions and direction is what let me move fast enough to see the whole thing come together before losing momentum.
