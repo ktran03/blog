@@ -85,7 +85,7 @@ The bottleneck used to be:
 
 With Claude in the loop, those bottlenecks largely disappear. You can clear a conceptual blocker in minutes. You can go from "I don't know how to implement this" to working code in a single conversation. And because you're always moving — because nothing blocks you long enough to kill your momentum — you reach somewhere real before you run out of steam.
 
-The other thing that helped: I created markdown docs as I went. Not formal documentation — just notes on what I learned, what decisions I made and why, what I still didn't understand. Those docs became context I fed back into Claude sessions, keeping continuity across a project that was moving fast.
+The other thing that helped: I created markdown docs as I went. Not formal documentation — just notes on what I learned, what decisions I made and why, what I still didn't understand. Those docs became context I fed back into Claude sessions, keeping continuity across a project that was moving fast. They can be viewed in the repos linked above if you want to see what that looks like in practice.
 
 ## The meta-lesson
 
