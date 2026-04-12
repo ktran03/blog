@@ -1,13 +1,13 @@
 ---
-title: "From 'what's PyTorch' to a full ML pipeline in 4 days"
-description: "How AI-assisted learning let me go from zero ML knowledge to training a custom model, building the full pipeline, and shipping an app — over a single weekend."
+title: "From 'what's a tensor' to a full ML pipeline in 4 days"
+description: "How AI-assisted learning let me go from not knowing what a tensor is to training a custom model and shipping a full ML pipeline — over a single weekend."
 date: 2026-04-12
 tags: ["ai", "learning", "coding", "agents"]
 ---
 
 It started on a Thursday with a simple question: *how does an AI model actually work?*
 
-Not in a hand-wavy "it learns from data" way. I mean mechanically — what is happening inside the thing? I kept seeing PyTorch come up everywhere and had no idea what it was. So I opened up an LLM and started asking.
+Not in a hand-wavy "it learns from data" way. I mean mechanically — what is happening inside the thing? I kept seeing PyTorch come up everywhere and had no idea what it was. So I opened up an LLM and started asking. One word kept blocking me: **tensor**. I didn't know what a tensor was. Five minutes later, I did.
 
 ## The drilling loop
 
