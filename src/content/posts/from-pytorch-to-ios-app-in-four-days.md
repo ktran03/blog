@@ -55,17 +55,19 @@ Thursday to Sunday. Starting from: *what's a tensor?*
 
 The week after, I let my machine run phase 2 training — extending to ~7,000 Chinese Han characters and incorporating manuscript scan data I found. That's still going.
 
-## Build first, understand later
+## Learn fast, build as you go, fill in the gaps
 
-The conventional path is: learn the theory, understand the system, then build something. I did it completely backwards. Build first — with AI filling the implementation gaps — then go back and understand what you built.
+The conventional path is: read theory, understand the system, then build something. That can take months before you touch anything real. What happened here was different — and faster.
 
-And I'd argue that's actually faster. Not because you skip the learning. You don't. But when you go back to fill in the gaps, the theory has somewhere to land.
+I started with a novice understanding, picked up a bunch of concepts quickly through Claude, then jumped into building while I was still learning. The two happened simultaneously. But AI-assisted building moves fast — faster than you can fully absorb everything in real time. So naturally things blur past you. You make decisions you don't fully understand yet. You use a technique because Claude recommended it and it works, but you couldn't explain every detail of why.
 
-"Backpropagation" means something different when you've watched it improve your model's accuracy in real time versus reading about it in a textbook. "Temperature scaling" clicks faster when you've already seen what miscalibrated confidence scores do to a routing system you built. The mental scaffolding is already there. The gaps fill in faster, and they stick.
+And that's fine. Because now you go back and fill in those gaps — and it's a completely different experience than reading theory cold.
 
-The conventional path keeps you in theory until you feel "ready." The problem is you never feel ready, and the theory doesn't fully make sense until you've used it. So you're stuck waiting to start until you understand it, but you can't fully understand it until you start. AI breaks that loop.
+"Backpropagation" means something different when you've already watched it improve your model's accuracy in real time. "Temperature scaling" clicks faster when you've already seen what miscalibrated confidence scores do to a routing system you built. The mental scaffolding is already there. The gaps fill in faster, and they stick.
 
-I know way more about ML now than I did on Thursday. Not because I read about it — because I built something with it, end to end, and now when I go deeper into the parts I don't fully understand yet, I already have the full picture in my head. That's a different kind of knowing.
+The conventional path keeps you in theory until you feel ready to build. The problem is you never quite feel ready, and the theory doesn't fully make sense until you've used it. So you wait to start until you understand it, but you can't fully understand it until you start. AI breaks that loop — you can learn and build at the same time, move fast, and circle back to solidify what you covered too quickly the first time.
+
+I know way more about ML now than I did on Thursday. Not because I sat and read about it — because I built something with it, end to end, and now when I go deeper into the parts I don't fully understand yet, I already have the full picture in my head. That's a different kind of knowing.
 
 ## What this actually means
 
