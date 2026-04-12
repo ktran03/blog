@@ -9,7 +9,7 @@ It started on a Thursday with a simple question: *how does an AI model actually 
 
 Not in a hand-wavy "it learns from data" way. I mean mechanically — what is happening inside the thing? I kept seeing PyTorch come up everywhere and had no idea what it was. So I opened up Claude and started asking. One word kept blocking me: **tensor**. I didn't know what a tensor was. Three minutes later, I did.
 
-I want to be upfront before going further: I didn't do this alone, and I'm not going to pretend otherwise. Claude was a co-builder throughout — explaining concepts, writing code, reviewing decisions, catching mistakes. What I brought was the problem, the direction, and enough curiosity to keep asking questions until things made sense. The point of this post isn't that I became an ML engineer in 4 days. It's about being empowered to build things you couldn't have built before — and realizing that the biggest barrier was never really knowledge. It was the feeling that you didn't know enough yet to start.
+I want to be upfront before going further: I didn't do this alone, and I'm not going to pretend otherwise. Claude was a co-builder throughout — explaining concepts, writing code, reviewing decisions, catching mistakes. What I brought was the problem, the direction, and enough curiosity to keep asking questions until things made sense. The point of this post isn't that I became an ML engineer in 4 days. It's about being empowered to build things you couldn't have built before. Knowledge is usually the barrier — you feel like you don't know enough to start, and often you're right. But with AI alongside you, filling in the gaps in real time, that barrier breaks down.
 
 ## The drilling loop
 
@@ -85,9 +85,9 @@ The other thing that helped: I created markdown docs as I went. Not formal docum
 
 ## The meta-lesson
 
-Most people have ideas they never act on. Not because they can't learn what's needed, but because the mountain of things they'd have to learn before feeling ready to start just looks too high. So they wait. And waiting becomes not starting. And not starting means the idea never happens.
+Most people have ideas they never act on. The mountain of things you'd need to learn before you could build them looks too high. So you wait until you know more. And waiting becomes not starting. And not starting means the idea never happens.
 
-AI flattens that mountain. Not by removing the learning — you still have to learn, and you should — but by being there for every gap, in real time, so the excuse to not start disappears. You don't need to know everything before you begin. You just need to begin, and let the understanding catch up as you go.
+AI doesn't remove that mountain — you still have to climb it. But it climbs alongside you, filling in the gaps in real time so you're never stuck at the base waiting to feel ready. You can start now, learn as you go, and actually get somewhere before you run out of momentum.
 
 That's what changed for me. I wasn't waiting to feel ready anymore. I had a collaborator that could cover my gaps while I built up the knowledge to cover them myself. The permission to start was always there — I just needed something to make that obvious.
 
