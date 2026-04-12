@@ -53,7 +53,7 @@ I won't pretend it wasn't a full sprint. And I want to be clear about what "buil
 
 ## Under the hood
 
-A few technical decisions worth calling out — not to show off, but because they were interesting problems I didn't expect to encounter.
+A few technical decisions worth calling out.
 
 **The class imbalance problem.** 461 Chữ Nôm-specific characters have zero real handwriting data anywhere in the world — they exist only as font renders. Meanwhile the 511 Han characters have ~576 real handwriting samples each from the CASIA database. Left unchecked, the model would see Han characters representing 99.4% of training data and learn to essentially ignore Nôm characters entirely. The fix is `WeightedRandomSampler` — each class gets a sampling weight inversely proportional to how many samples it has, so every class appears at roughly equal frequency in every training batch regardless of raw sample count. Without this, the whole Nôm side of the model would be useless.
 
