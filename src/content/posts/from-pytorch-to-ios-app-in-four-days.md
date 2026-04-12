@@ -1,6 +1,6 @@
 ---
 title: "From 'what's a tensor' to a full ML pipeline in 4 days"
-description: "How AI-assisted learning let me go from not knowing what a tensor is to training a custom model and shipping a full ML pipeline — over a single weekend."
+description: "How AI-assisted building let me go from zero ML knowledge to a working end-to-end pipeline — and why building first, understanding later, is the faster path."
 date: 2026-04-12
 tags: ["ai", "learning", "coding", "agents"]
 ---
@@ -9,7 +9,7 @@ It started on a Thursday with a simple question: *how does an AI model actually 
 
 Not in a hand-wavy "it learns from data" way. I mean mechanically — what is happening inside the thing? I kept seeing PyTorch come up everywhere and had no idea what it was. So I opened up Claude and started asking. One word kept blocking me: **tensor**. I didn't know what a tensor was. Five minutes later, I did.
 
-I want to be upfront about something before going further: I didn't do this alone, and I'm not going to pretend otherwise. Claude was a co-builder throughout — explaining concepts, writing code, reviewing decisions, catching mistakes. What I brought was the problem, the direction, and enough curiosity to keep asking questions until things made sense. That collaboration is the whole point of this post.
+I want to be upfront before going further: I didn't do this alone, and I'm not going to pretend otherwise. Claude was a co-builder throughout — explaining concepts, writing code, reviewing decisions, catching mistakes. What I brought was the problem, the direction, and enough curiosity to keep asking questions until things made sense. The point of this post isn't that I became an ML engineer in 4 days. It's about what order you do things in — and what becomes possible when implementation is no longer the bottleneck.
 
 ## The drilling loop
 
@@ -55,11 +55,23 @@ Thursday to Sunday. Starting from: *what's a tensor?*
 
 The week after, I let my machine run phase 2 training — extending to ~7,000 Chinese Han characters and incorporating manuscript scan data I found. That's still going.
 
+## Build first, understand later
+
+The conventional path is: learn the theory, understand the system, then build something. I did it completely backwards. Build first — with AI filling the implementation gaps — then go back and understand what you built.
+
+And I'd argue that's actually faster. Not because you skip the learning. You don't. But when you go back to fill in the gaps, the theory has somewhere to land.
+
+"Backpropagation" means something different when you've watched it improve your model's accuracy in real time versus reading about it in a textbook. "Temperature scaling" clicks faster when you've already seen what miscalibrated confidence scores do to a routing system you built. The mental scaffolding is already there. The gaps fill in faster, and they stick.
+
+The conventional path keeps you in theory until you feel "ready." The problem is you never feel ready, and the theory doesn't fully make sense until you've used it. So you're stuck waiting to start until you understand it, but you can't fully understand it until you start. AI breaks that loop.
+
+I know way more about ML now than I did on Thursday. Not because I read about it — because I built something with it, end to end, and now when I go deeper into the parts I don't fully understand yet, I already have the full picture in my head. That's a different kind of knowing.
+
 ## What this actually means
 
-This isn't a story about how smart I am. I'm not. A week earlier I didn't know what a tensor was. And I want to be clear — I'm not an ML engineer now. I'm a novice in every sense of the word. There's a mountain of things I don't understand yet, and I'm under no illusion about that. But I'm learning, picking away at it, and getting somewhere.
+This isn't a story about how smart I am. I'm not. A week earlier I didn't know what a tensor was. And I want to be clear — I'm not an ML engineer now. I'm a novice in every sense of the word. There's a mountain of things I don't understand yet, and I'm under no illusion about that. But I'm learning, picking away at it, and I have something real to show for it.
 
-The story is really about what the bottleneck is now. It used to be:
+The bottleneck used to be:
 - Not knowing enough to start
 - Spending months in tutorial hell before touching a real problem
 - Getting stuck on a concept and losing momentum
@@ -73,8 +85,8 @@ The other thing that helped: I created markdown docs as I went. Not formal docum
 
 A lot of people are still treating LLMs like fancy search engines or autocomplete. That's not what this is. The right mental model is a collaborator — one that can explain, build, review, and push back, all while meeting you exactly where you are.
 
-What changes is the ratio of thinking to doing. You spend more time on the problem — what to build, why it matters, whether the approach makes sense — and less time on the mechanics of implementation. That's not laziness. That's leverage.
+What changes is the ratio of thinking to doing. You spend more time on the problem — what to build, why it matters, whether the approach makes sense — and less time on the mechanics of getting there. That's not laziness. That's leverage.
 
-I didn't learn ML in a weekend. But I learned enough to build something real, with a collaborator that filled the gaps I hadn't closed yet. And now those gaps are smaller than they were on Thursday.
+The claim isn't "I learned ML in a weekend." The claim is: by building something real first, I now understand ML in a way that months of reading theory alone wouldn't have given me. And I have a working project that keeps teaching me every time I come back to it.
 
 That's what's different now.
