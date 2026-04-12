@@ -7,13 +7,13 @@ tags: ["ai", "learning", "coding", "agents"]
 
 It started on a Thursday with a simple question: *how does an AI model actually work?*
 
-Not in a hand-wavy "it learns from data" way. I mean mechanically — what is happening inside the thing? I kept seeing PyTorch come up everywhere and had no idea what it was. So I opened up Claude and started asking. One word kept blocking me: **tensor**. I didn't know what a tensor was. Five minutes later, I did.
+Not in a hand-wavy "it learns from data" way. I mean mechanically — what is happening inside the thing? I kept seeing PyTorch come up everywhere and had no idea what it was. So I opened up Claude and started asking. One word kept blocking me: **tensor**. I didn't know what a tensor was. Three minutes later, I did.
 
 I want to be upfront before going further: I didn't do this alone, and I'm not going to pretend otherwise. Claude was a co-builder throughout — explaining concepts, writing code, reviewing decisions, catching mistakes. What I brought was the problem, the direction, and enough curiosity to keep asking questions until things made sense. The point of this post isn't that I became an ML engineer in 4 days. It's about what order you do things in — and what becomes possible when implementation is no longer the bottleneck.
 
 ## The drilling loop
 
-The first answer Claude gave me on PyTorch — I understood maybe 40% of it. One word kept appearing: **tensor**. So I asked about tensors. Five minutes later, I got it. Back to PyTorch. Hit another term I didn't know. Drilled into that. Back to the overview. Repeat.
+The first answer Claude gave me on PyTorch — I understood maybe 40% of it. One word kept appearing: **tensor**. So I asked about tensors. Three minutes later, I got it. Back to PyTorch. Hit another term I didn't know. Drilled into that. Back to the overview. Repeat.
 
 This is a different way to learn. It's not reading a textbook front to back. It's not sitting through a tutorial series for three weeks before you touch anything real. It's more like having a patient expert in the room who never gets tired of your questions and always meets you exactly where you are.
 
@@ -21,7 +21,7 @@ Within a couple of hours, the whole picture clicked.
 
 ## The aha moment
 
-At some point I asked Claude to just explain what a model *is* at the lowest level. A model is essentially a collection of matrices — multi-dimensional arrays of numbers. Those numbers are what the model "knows." Training is the process of feeding inputs, checking how wrong the output was, and nudging those numbers slightly in the right direction. Do that millions of times with enough data, and the numbers converge to encode what we'd call truth.
+I wanted more than a surface-level understanding — I wanted a deep intuitive picture of the whole thing. So I kept probing, kept asking follow-up questions, kept pushing until things connected. A picture emerged: a model is essentially a collection of matrices — multi-dimensional arrays of numbers. Those numbers are what the model "knows." Training is the process of feeding inputs, checking how wrong the output was, and nudging those numbers slightly in the right direction. Do that millions of times with enough data, and the numbers converge to encode what we'd call truth.
 
 That hit different.
 
@@ -33,9 +33,9 @@ Once I saw that, the mysticism evaporated. There was no magic box anymore. Just 
 
 ## Then I remembered a project I'd been sitting on
 
-I'd been wanting to build something around **Chữ Nôm** — the classical Vietnamese script used for centuries before the Latin-based alphabet took over. Most Vietnamese people today can't read it, which means a huge chunk of cultural and historical text is essentially locked away.
+I'd been wanting to build something around **Chữ Nôm** — the classical Vietnamese script used for centuries before the Latin-based alphabet took over. Only around 100 people in the world can still read it fluently, which means centuries of cultural and historical text is essentially locked away.
 
-I had the idea of an app that lets you point your phone at a manuscript and get a translation. But every time I thought about starting, the barrier felt enormous. I didn't know ML. I didn't know Core ML. I didn't know anything about training a classifier. The starting friction felt like a wall.
+I had the idea of an app that lets you point your phone at a manuscript and get a translation. There are a few other projects working in this space, but they're mostly academic — hard to access, not user friendly, no correction flywheel, require an internet connection, inference done server-side. That wasn't what I had in mind. But every time I thought about starting, the barrier felt enormous. I didn't know ML. I didn't know Core ML. I didn't know anything about training a classifier. The starting friction felt like a wall.
 
 After that Thursday afternoon of drilling, the wall wasn't there anymore.
 
@@ -47,13 +47,13 @@ I won't pretend it wasn't a full sprint. And I want to be clear about what "buil
 
 **The iOS app** ([github](https://github.com/ktran03/nomlens-ios)) — you photograph a manuscript page. The app detects character bounding boxes using Apple's Vision framework, crops each one, runs it through the model, and shows the character with its Quốc ngữ transliteration and English meaning. Confidence-based routing: high confidence shows immediately, low confidence escalates to Claude Vision API as a fallback.
 
-**OTA model delivery** — models aren't bundled in the app binary. They're hosted on S3 and downloaded on demand. This means I can ship new model versions without an App Store update.
+**OTA model delivery** — models aren't bundled in the app binary. They're hosted on S3 and downloaded on demand. As users correct misidentified characters, those corrections feed back into training. The model improves over time, and I can ship updated versions anytime — no App Store update required.
 
 **[NomLens](https://nomlens.com)** — the project has its own site if you want to dig deeper.
 
 Thursday to Sunday. Starting from: *what's a tensor?*
 
-The week after, I let my machine run phase 2 training — extending to ~7,000 Chinese Han characters and incorporating manuscript scan data I found. That's still going.
+The week after, I let my machine run phase 2 training — extending to ~3,000 more Nôm characters, ~7,000 Chinese Han characters, and incorporating real manuscript scan data I found. That's still going.
 
 ## Learn fast, build as you go, fill in the gaps
 
