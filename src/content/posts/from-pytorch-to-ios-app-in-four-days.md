@@ -55,7 +55,7 @@ The week after, I let my machine run phase 2 training — extending to ~7,000 Ch
 
 ## What this actually means
 
-This isn't a story about how smart I am. I'm not. A week earlier I didn't know what a tensor was.
+This isn't a story about how smart I am. I'm not. A week earlier I didn't know what a tensor was. And I want to be clear — I'm not an ML engineer now. I'm a novice in every sense of the word. There's a mountain of things I don't understand yet, and I'm under no illusion about that. But I'm learning, and I'm picking away at it.
 
 It's a story about what the bottleneck actually is now. The bottleneck is no longer:
 - Not knowing enough to start
