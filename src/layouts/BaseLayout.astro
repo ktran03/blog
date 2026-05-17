@@ -1,6 +1,7 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import { Analytics } from '@vercel/analytics/astro';
 import '@/styles/global.css';
 
 interface Props {
@@ -58,5 +59,6 @@ const fullTitle = title === 'kt.dev' ? title : `${title} — kt.dev`;
       <slot />
     </main>
     <Footer />
+    <Analytics />
   </body>
 </html>
